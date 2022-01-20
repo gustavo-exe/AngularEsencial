@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'works';
+  valor1:boolean = false;
+  valor2:boolean = true;
 }
