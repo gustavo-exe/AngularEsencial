@@ -6,10 +6,14 @@
 </section>
 
 <section class="container" >
-  <article *ngIf="valor2" >
+  <article *ngIf="valor2; else otroTexto" >
     <h1>Texto 2</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, vel voluptatibus, a animi quae laboriosam omnis ullam non repellat facilis aut! Nesciunt voluptas, eos quibusdam dolor impedit fugiat laborum est.</p>
   </article>
+
+  <ng-template #otroTexto >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque iste voluptates earum delectus sed distinctio error itaque facilis? Ratione autem asperiores temporibus dolor error, animi repellendus facilis deleniti repellat provident.
+  </ng-template>
 </section>
 <hr>
 <button (click)="valor1 = true" >texto 1</button>
