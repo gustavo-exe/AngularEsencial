@@ -18,3 +18,16 @@
 <hr>
 <button (click)="valor1 = true" >texto 1</button>
 <button  (click)="valor2 = !valor2" >texto 2</button>
+
+
+
+<h1>Organizador de tareas</h1>
+
+<div [ngSwitch]="diasDeSemana" >
+  <p *ngSwitchCase="'lunes'" >Tomar cafe</p>
+  <p *ngSwitchCase="2" >Escribiste un numero</p>
+
+  <p *ngSwitchDefault >Escriba un dia de semana</p>
+</div>
+
+<input type="text" [(ngModel)]="diasDeSemana" />

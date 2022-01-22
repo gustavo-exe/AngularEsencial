@@ -9,4 +9,5 @@ export class AppComponent {
   title = 'works';
   valor1:boolean = false;
   valor2:boolean = true;
+  diasDeSemana:any;
 }
