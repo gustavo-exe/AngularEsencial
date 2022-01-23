@@ -1,5 +1,10 @@
 <ul>
-  <li *ngFor="let libro of libros">
-    {{ libro.titulo}}
+  <li *ngFor="let libro of libros; index as indice; first as esPrimero; last as elUltimo; even as impar">
+    {{ libro.titulo}}-{{indice}}
+
+    <span *ngIf="impar" >Impar</span>
+    <span *ngIf="elUltimo" >Ultimo</span>
+    <span *ngIf="indice === 2" > Es el 2 </span>
+    <span *ngIf="esPrimero" > Primero</span>
   </li>
 </ul>
