@@ -10,4 +10,5 @@ export class AppComponent {
   valor1:boolean = false;
   valor2:boolean = true;
   diasDeSemana:any;
+  color:string ='';
 }

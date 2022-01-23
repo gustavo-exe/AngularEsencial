@@ -4,3 +4,12 @@
   padding: 5%;
 
 }
+
+.cuadrado{
+  width: 8rem;
+  height: 8rem;
+}
+
+button.activo{
+  background-color: pink;
+}
