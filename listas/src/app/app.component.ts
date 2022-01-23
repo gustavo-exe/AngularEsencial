@@ -16,4 +16,8 @@ export class AppComponent {
       {id:3,titulo:'Orgullo y prejuicio', autor:'Jane Austen',descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."}
     ]
   }
+
+  mostrarAutor(_libro:any){
+    alert(`${_libro.titulo} fue escrito pot ${_libro.autor}`)
+  }
 }
