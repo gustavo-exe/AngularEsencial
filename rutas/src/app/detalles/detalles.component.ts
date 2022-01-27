@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Libro } from "../modelos/libro-model";
 
 @Component({
@@ -9,8 +10,10 @@ import { Libro } from "../modelos/libro-model";
 export class DetallesComponent implements OnInit {
   
   libros:Array<Libro>;
+  libroId:any;
+  libroSeleccionado: any;
 
-  constructor() { 
+  constructor(private ruta:ActivatedRoute) { 
 
     this.libros = [
       { id: 1, titulo: 'El retrato de Dorian Gray', autor: 'Oscar Wilde', descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam." },
@@ -27,5 +30,11 @@ export class DetallesComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.libroId = this.ruta.snapshot.paramMap.get('libroId');
+    this.libroSeleccionado = this.encontrarLibro();
+  }
+
+  encontrarLibro(){
+    return this.libros.filter((libro) => libro.id == this.libroId)[0];
   }
 }
