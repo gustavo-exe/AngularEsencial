@@ -9,7 +9,7 @@ import { EncabezadoComponent } from './encabezado/encabezado.component';
 import { Error404Component } from './error404/error404.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ListaDeLibrosComponent } from './lista-de-libros/lista-de-libros.component';
-
+import { LibrosSeleccionadosService } from "./libros-seleccionados.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +24,9 @@ import { ListaDeLibrosComponent } from './lista-de-libros/lista-de-libros.compon
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    LibrosSeleccionadosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
