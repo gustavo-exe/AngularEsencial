@@ -8,8 +8,8 @@
     </nav>
   
     <div class="encabezado">
-      <button  class="glyphicon glyphicon-book mostrar-libros" type="submit">...</button>
-      <div class="misLibros" >
+      <button  class="glyphicon glyphicon-book mostrar-libros" (click)="isMostrarLista = !isMostrarLista" type="submit">libros</button>
+      <div class="misLibros" *ngIf="isMostrarLista" >
         <h2>Mis libros</h2>
         <ul>
           <li></li>

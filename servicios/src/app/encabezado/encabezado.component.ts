@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./encabezado.component.css']
 })
 export class EncabezadoComponent implements OnInit {
-
+  isMostrarLista:boolean=false;
   constructor() { }
 
   ngOnInit(): void {
